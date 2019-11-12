@@ -29,7 +29,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8090/eureka
+      defaultZone: http://127.0.0.1:10050/eureka
     instance-info-replication-interval-seconds: 30
   instance:
     prefer-ip-address: true
