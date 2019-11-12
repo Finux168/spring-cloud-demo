@@ -1,0 +1,16 @@
+server:
+  port: 10050
+
+spring:
+  application:
+    name: eureka-server
+
+#  关闭eureka-server自带的客户端注册
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://127.0.0.1:10050/eureka

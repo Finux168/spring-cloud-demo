@@ -1,0 +1,35 @@
+server:
+  port: 10000
+
+spring:
+  application:
+    name: zuul-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10050/eureka
+  instance:
+    prefer-ip-address: true
+
+zuul:
+  # 禁止通过zuul直接访问微服务
+  ignored-services: '*'
+  # 指定sensitive-headers为空,即放行cookie
+  sensitive-headers: Cookie,Authorization
+  SendErrorFilter:
+    error:
+      disable: true
+  set-content-length: true
+  # 设置调用超时时间
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+  routes:
+    auth-service:
+      path: /auth/**
+      serviceId: auth-service
+
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
