@@ -71,12 +71,6 @@
                 <artifactId>feign-httpclient</artifactId>
                 <version>${feign-httpclient.version}</version>
             </dependency>
-<!--            spring-security-oauth2 依赖 -->
-            <dependency>
-                <groupId>org.springframework.security.oauth</groupId>
-                <artifactId>spring-security-oauth2</artifactId>
-                <version>${spring-security-oauth2.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 

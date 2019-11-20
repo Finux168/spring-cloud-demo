@@ -2,6 +2,8 @@ package com.insure.biz.user.entity;
 
 import lombok.Data;
 
+import java.time.LocalDate;
+
 /**
  * 用户实体类
  *
@@ -13,7 +15,11 @@ public class User {
 
     private String id;
 
-    private String name;
+    private String username;
 
     private String password;
+
+    private String name;
+
+    private LocalDate birthday;
 }

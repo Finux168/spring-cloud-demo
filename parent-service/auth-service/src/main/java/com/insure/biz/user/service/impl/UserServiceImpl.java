@@ -22,4 +22,9 @@ public class UserServiceImpl implements UserService {
     public User getUserById(String userId) {
         return userMapper.selectUserById(userId);
     }
+
+    @Override
+    public User getUserByUsername(String username) {
+        return userMapper.selectUserByUserName(username);
+    }
 }

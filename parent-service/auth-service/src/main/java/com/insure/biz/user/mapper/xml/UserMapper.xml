@@ -10,4 +10,12 @@
         WHERE
             id=#{userId}
     </select>
+    <select id="selectUserByUserName" resultType="com.insure.biz.user.entity.User">
+        SELECT
+            *
+        FROM
+            `user`
+        WHERE
+            username=#{username}
+    </select>
 </mapper>

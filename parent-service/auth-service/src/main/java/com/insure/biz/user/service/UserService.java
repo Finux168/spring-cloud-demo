@@ -10,4 +10,6 @@ import com.insure.biz.user.entity.User;
 public interface UserService {
 
     User getUserById(String userId);
+
+    User getUserByUsername(String username);
 }
