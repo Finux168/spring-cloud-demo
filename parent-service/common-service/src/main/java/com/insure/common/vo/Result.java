@@ -30,8 +30,6 @@ public class Result<T> implements Serializable {
      */
     private Integer code = 0;
 
-    private Long total;
-
     /**
      * 返回数据对象 data
      */

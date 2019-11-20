@@ -15,6 +15,11 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class InsureExceptionHandler {
 
+    @ExceptionHandler(InsureException.class)
+    public Result<String> handleInsureException(InsureException e){
+        return Result.err(e.getMsg(),e.getCode());
+    }
+
     @ExceptionHandler(Exception.class)
     public Result<String> handleException(Exception e){
         log.error(e.getMessage(), e);

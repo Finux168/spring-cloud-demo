@@ -7,6 +7,8 @@
         <module>eureka-server</module>
         <module>zuul-server</module>
         <module>auth-service</module>
+        <module>common-service</module>
+        <module>order-service</module>
     </modules>
 
 
@@ -29,8 +31,9 @@
         <fastjson.version>1.2.58</fastjson.version>
         <common-codec.version>1.12</common-codec.version>
         <mybatis.version>2.1.0</mybatis.version>
-        <feign-httpclient.version>9.4.0</feign-httpclient.version>
+        <feign-httpclient.version>10.1.0</feign-httpclient.version>
         <spring-security-oauth2.version>2.3.5.RELEASE</spring-security-oauth2.version>
+        <jjwt.version>0.10.7</jjwt.version>
     </properties>
 
     <!--    可选依赖-->
@@ -70,6 +73,22 @@
                 <groupId>io.github.openfeign</groupId>
                 <artifactId>feign-httpclient</artifactId>
                 <version>${feign-httpclient.version}</version>
+            </dependency>
+<!--            jwt依赖库  -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-api</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-impl</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-jackson</artifactId>
+                <version>${jjwt.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -1,5 +1,6 @@
 package com.insure.common.exception;
 
+import com.insure.common.ErrorCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,5 +29,10 @@ public class InsureException extends RuntimeException {
         this.code = code;
         this.msg = msg;
         this.result = result;
+    }
+
+    public InsureException(ErrorCode errorCode){
+        this.code = errorCode.getCode();
+        this.msg = errorCode.getMessage();
     }
 }
